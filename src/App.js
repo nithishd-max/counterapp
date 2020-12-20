@@ -4,6 +4,7 @@ import { useState ,} from 'react';
 
 function App() {
   const [count,setCount]= useState(0);
+ // const [msg,setMsg]=useState("Ooops");
   return (
     <div className="App">
       <header>
@@ -11,8 +12,8 @@ function App() {
       </header>
       <h2>current value of counter is {count}</h2>
       <button onClick={() =>setCount(0)}>reset</button>
-      <button onClick={() =>setCount(count+1)}>increment</button>
-      <button onClick={() =>setCount(count-1)}>decrement</button>
+      <button onClick={() =>(count>=10?"":setCount(count+1))}>increment</button>
+      <button onClick={() =>(count<=0?"":setCount(count-1))}>decrement</button>
 
 
 
